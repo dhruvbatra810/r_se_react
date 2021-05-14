@@ -1,17 +1,27 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+import React, { useState, useEffect } from "react";
+import ReactDom from "react-dom";
+import App from "./App";
+import Header from "./header";
+import Items from "./items";
+import "./index.css";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Cart } from "./cart";
+function BookList({ value }) {
+  const [v, cv] = useState(1);
+  const [arr, changearr] = useSatate([]);
+  return (
+    <Pass value={(arr, changearr)}>
+      <Router>
+        <Header v={v}></Header>
+        <Route exact path="/">
+          <App></App>
+        </Route>
+        <Route exact path="/cart">
+          <Items></Items>
+        </Route>
+      </Router>
+    </Pass>
+  );
+}
+export default BookList;
+ReactDom.render(<BookList />, document.getElementById("root"));

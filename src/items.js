@@ -1,11 +1,19 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 // import { Cart } from "./cart";
 import Item from "./item";
 import { Path } from "./index";
 const Items = ({ wow }) => {
   const { arr, remove } = useContext(Path);
-  // console.log(arr);
-  // const [pr, cpr] = useState(0);
+  console.log(arr);
+  const [pr, cpr] = useState(0);
+  useEffect(() => {
+    let varr = 0;
+    arr.map((prop) => {
+      varr = varr + prop.price;
+    });
+    cpr(varr);
+  }, []);
+
   if (arr.length) {
     return (
       <>
@@ -13,11 +21,12 @@ const Items = ({ wow }) => {
           {arr.map((prop, Index) => {
             return (
               <>
-                <Item {...prop} key={Index}></Item>
+                <Item {...prop} key={prop.val}></Item>
               </>
             );
           })}
         </div>
+        <h1>Total Price:{pr}</h1>
       </>
     );
   } else return <h1>Cart emptys</h1>;

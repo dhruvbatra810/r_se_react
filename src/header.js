@@ -28,19 +28,19 @@ const Header = ({ v }) => {
             <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item">
-                  <a className="nav-link listnav" href="#cta">
-                    Contact
-                  </a>
+                  <Link className="nav-link listnav" to="/cotact">
+                    contact
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link listnav" href="#features">
-                    Order
-                  </a>
+                  <Link className="nav-link listnav" to="/order">
+                    order
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link listnav" href="#title">
-                    About Us
-                  </a>
+                  <Link className="nav-link listnav" to="/aboutus">
+                    aboutus
+                  </Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link listnav" to="/cart">

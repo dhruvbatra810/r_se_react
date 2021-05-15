@@ -1,10 +1,7 @@
-import { Cart } from "./cart";
+import { useContext } from "react";
+import { Path } from "./index";
 const Item = ({ name, url, price, val }) => {
-  const remove = (novalue) => {
-    Cart = Cart.filter((value) => {
-      return value != novalue;
-    });
-  };
+  const { remove } = useContext(Path);
   return (
     <>
       <div className="row" style={{ padding: "1rem" }}>

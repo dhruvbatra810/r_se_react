@@ -6,21 +6,31 @@ import Items from "./items";
 import "./index.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Cart } from "./cart";
-function BookList({ value }) {
+export const Path = React.createContext();
+function BookList() {
   const [v, cv] = useState(1);
-  const [arr, changearr] = useSatate([]);
+  const [arr, changearr] = useState([]);
+  const remove = (novalue) => {
+    changearr((arr) => {
+      return arr.filter((idvalue) => {
+        return idvalue.val !== novalue;
+      });
+    });
+  };
   return (
-    <Pass value={(arr, changearr)}>
+    <>
       <Router>
         <Header v={v}></Header>
-        <Route exact path="/">
-          <App></App>
+        <Route exact path="/order">
+          <App wow={{ arr, changearr }}></App>
         </Route>
         <Route exact path="/cart">
-          <Items></Items>
+          <Path.Provider value={{ arr, remove }}>
+            <Items></Items>
+          </Path.Provider>
         </Route>
       </Router>
-    </Pass>
+    </>
   );
 }
 export default BookList;

@@ -1,34 +1,31 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Medicines } from "./medicines";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { Cart } from "./cart";
-// import Header from "./header";
-import BookList from "./index";
+import { Pass } from "./index";
 // import ""
-const App = () => {
+const App = ({ wow }) => {
+  const d = new Date();
   return (
     <div className="container">
       <div className="row">
         <>
           {Medicines.map((prop) => {
-            return <Card {...prop} key={prop.id}></Card>;
+            return <Card {...prop} {...wow} key={prop.id}></Card>;
           })}
         </>
       </div>
     </div>
   );
 };
-const Card = ({ url, name, price, id }) => {
-  const [value, ChangeValue] = useState(0);
-  const val = new Date().getTime().toFixed();
+const Card = ({ url, name, price, id, arr, changearr, d }) => {
   const addit = (name, id, url, price) => {
-    Cart.push({ url, id, name, price, val });
-    ChangeValue(value + 1);
+    changearr(() => {
+      const val = parseInt(new Date().getTime(), 10);
+      arr.push({ url, id, name, price, val });
+      return arr;
+    });
   };
-  useEffect(() => {
-    console.log(value);
-    return <BookList v={value}></BookList>;
-  }, [value]);
   return (
     <>
       <div className="col" style={{ padding: "1rem" }}>

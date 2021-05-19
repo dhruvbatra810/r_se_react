@@ -7,10 +7,9 @@ const Header = ({ v }) => {
     <>
       <section id="title">
         <div className="pad-1">
-          <nav className="navbar navbar-expand-lg navbar-dark ">
-            <p>{v}</p>
-            <a className="navbar-brand">
-              <i className="fas fa-notes-medical"></i> GetMeds
+          <nav className="navbar navbar-expand-lg navbar-dark pd-3">
+            <a className="navbar-brand fs-2  my-3 mx-5">
+              <i className="fas fa-notes-medical "></i> GetMeds
             </a>
 
             <button

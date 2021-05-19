@@ -1,14 +1,13 @@
 import { useContext } from "react";
 import { Path } from "./index";
-const Item = ({ name, url, price, val }) => {
+const Item = ({ name, url, price, val,para }) => {
   const { remove } = useContext(Path);
   return (
-    <>
-      <div className="row" style={{ padding: "1rem" }}>
-        <div className="col">
+    <div className="container my-4">
+      <div className="row" >
+        <div className="col-12">
           <div
             className="card mb-3"
-            style={{ maxWidth: "50rem", maxHeight: "10rem" }}
           >
             <div className="row g-0">
               <div className="col-md-4">
@@ -21,10 +20,7 @@ const Item = ({ name, url, price, val }) => {
               <div className="col-md-8">
                 <div className="card-body">
                   <h5 className="card-title">{name}</h5>
-                  <p className="card-text">Lorem ipsum dolor sit amet.</p>
-                  <p className="card-text">
-                    <small className="text-muted">{val}</small>
-                  </p>
+                  <p className="card-text">{para}</p>
                   <button
                     type="button"
                     className="btn btn-primary"
@@ -40,7 +36,7 @@ const Item = ({ name, url, price, val }) => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 export default Item;

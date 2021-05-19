@@ -4,7 +4,7 @@ import Item from "./item";
 import { Path } from "./index";
 const Items = ({ wow }) => {
   const { arr, remove } = useContext(Path);
-  console.log(arr);
+  // console.log(arr);
   const [pr, cpr] = useState(0);
   useEffect(() => {
     let varr = 0;
@@ -12,7 +12,7 @@ const Items = ({ wow }) => {
       varr = varr + prop.price;
     });
     cpr(varr);
-  }, []);
+  });
 
   if (arr.length) {
     return (
@@ -28,15 +28,19 @@ const Items = ({ wow }) => {
           <h1>Total Price:{pr}</h1>
           <button className="btn btn-primary">Place order</button>
         </div>
-        
       </>
     );
-  } else return(
-    <>
-    <h1 className=" container my-4 text-center">Please! Add your item into Cart :)</h1>
-    <h1 className=" text-center"><i className="fas fa-cart-arrow-down fa-5x"> </i></h1>
-    </>
-   ) ;
+  } else
+    return (
+      <>
+        <h1 className=" container my-4 text-center">
+          Please! Add your item into Cart :)
+        </h1>
+        <h1 className=" text-center">
+          <i className="fas fa-cart-arrow-down fa-5x"> </i>
+        </h1>
+      </>
+    );
 };
 
 export default Items;

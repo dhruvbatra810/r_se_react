@@ -2,7 +2,7 @@ import React from "react";
 import "./header.css";
 import { Link } from "react-router-dom";
 const Header = ({ v }) => {
-  console.log("wow");
+  // console.log("wow");
   return (
     <>
       <section id="title">
@@ -27,8 +27,8 @@ const Header = ({ v }) => {
             <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
               <ul className="navbar-nav ms-auto">
                 <li className="nav-item">
-                  <Link className="nav-link listnav fs-5" to="/cotact">
-                    contact
+                  <Link className="nav-link listnav fs-5" to="/">
+                    home
                   </Link>
                 </li>
                 <li className="nav-item">

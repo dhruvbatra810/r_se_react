@@ -31,7 +31,12 @@ const Items = ({ wow }) => {
         
       </>
     );
-  } else return <h1 className=" container my-4 mx-4">Please! Add your item into Cart :)</h1>;
+  } else return(
+    <>
+    <h1 className=" container my-4 text-center">Please! Add your item into Cart :)</h1>
+    <h1 className=" text-center"><i className="fas fa-cart-arrow-down fa-5x"> </i></h1>
+    </>
+   ) ;
 };
 
 export default Items;

@@ -7,9 +7,9 @@ const Header = ({ v }) => {
     <>
       <section id="title">
         <div className="pad-1">
-          <nav className="navbar navbar-expand-lg navbar-dark pd-3">
-            <a className="navbar-brand fs-2  my-3 mx-5">
-              <i className="fas fa-notes-medical "></i> GetMeds
+          <nav className="navbar navbar-expand-lg navbar-dark">
+            <a className="navbar-brand fs-2">
+              <i className="fas fa-notes-medical"></i> GetMeds
             </a>
 
             <button
@@ -25,24 +25,24 @@ const Header = ({ v }) => {
             </button>
 
             <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-              <ul className="navbar-nav ml-auto">
+              <ul className="navbar-nav ms-auto">
                 <li className="nav-item">
-                  <Link className="nav-link listnav" to="/cotact">
+                  <Link className="nav-link listnav fs-5" to="/cotact">
                     contact
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link listnav" to="/order">
+                  <Link className="nav-link listnav fs-5" to="/order">
                     order
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link listnav" to="/aboutus">
+                  <Link className="nav-link listnav fs-5" to="/aboutus">
                     aboutus
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link listnav" to="/cart">
+                  <Link className="nav-link listnav fs-5" to="/cart">
                     Cart
                   </Link>
                 </li>

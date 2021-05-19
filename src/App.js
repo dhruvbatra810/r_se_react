@@ -30,7 +30,7 @@ const Card = ({ url, name, price, id, arr, changearr, d,para }) => {
     <>
       <div className="col" style={{ padding: "1rem" }}>
         <div className="card" style={{ width: "18rem" }}>
-          <img src={url} className="card-img-top"  alt="..." />
+          <img src={url} className="card-img-top" height="300px" width="300px"  alt="..." />
           <div className="card-body">
             <h5 className="card-title">{name}</h5>
             <p className="card-text">
@@ -41,7 +41,7 @@ const Card = ({ url, name, price, id, arr, changearr, d,para }) => {
               type="button"
               className="btn btn-primary"
               onClick={() => {
-                addit(name, id, url, price);
+                addit(name, id, url, price,para);
               }}
             >
               add to cart

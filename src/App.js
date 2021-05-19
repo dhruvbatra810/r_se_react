@@ -18,11 +18,11 @@ const App = ({ wow }) => {
     </div>
   );
 };
-const Card = ({ url, name, price, id, arr, changearr, d }) => {
+const Card = ({ url, name, price, id, arr, changearr, d,para }) => {
   const addit = (name, id, url, price) => {
     changearr(() => {
       const val = parseInt(new Date().getTime(), 10);
-      arr.push({ url, id, name, price, val });
+      arr.push({ url, id, name, price, val,para });
       return arr;
     });
   };
@@ -30,19 +30,18 @@ const Card = ({ url, name, price, id, arr, changearr, d }) => {
     <>
       <div className="col" style={{ padding: "1rem" }}>
         <div className="card" style={{ width: "18rem" }}>
-          <img src={url} className="card-img-top" alt="..." />
+          <img src={url} className="card-img-top" height="300px" width="300px"  alt="..." />
           <div className="card-body">
             <h5 className="card-title">{name}</h5>
             <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              {para}
             </p>
-            <p>{price}</p>
+            <p><b><span>Rs </span>{price}<span></span></b></p>
             <button
               type="button"
               className="btn btn-primary"
               onClick={() => {
-                addit(name, id, url, price);
+                addit(name, id, url, price,para);
               }}
             >
               add to cart

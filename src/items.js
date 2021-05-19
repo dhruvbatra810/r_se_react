@@ -25,11 +25,18 @@ const Items = ({ wow }) => {
               </>
             );
           })}
+          <h1>Total Price:{pr}</h1>
+          <button className="btn btn-primary">Place order</button>
         </div>
-        <h1>Total Price:{pr}</h1>
+        
       </>
     );
-  } else return <h1>Cart emptys</h1>;
+  } else return(
+    <>
+    <h1 className=" container my-4 text-center">Please! Add your item into Cart :)</h1>
+    <h1 className=" text-center"><i className="fas fa-cart-arrow-down fa-5x"> </i></h1>
+    </>
+   ) ;
 };
 
 export default Items;

@@ -27,7 +27,6 @@ const Item = ({ name, url, price, val, para }) => {
                     onClick={() => {
                       remove(val);
                       cval(vall - 1);
-                      // console.log(vall);
                     }}
                   >
                     remove

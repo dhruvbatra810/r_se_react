@@ -5,7 +5,6 @@ import { Path } from "./index";
 import Modal from "./modal";
 const Items = ({ wow }) => {
   const { arr } = useContext(Path);
-  console.log("wowow");
   const [pr, cpr] = useState(0);
   useEffect(() => {
     let varr = 0;

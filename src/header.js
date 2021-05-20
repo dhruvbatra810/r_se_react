@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./header.css";
 import { Link } from "react-router-dom";
 const Header = ({ v }) => {
-  console.log("qqq");
   return (
     <>
       <section id="title">

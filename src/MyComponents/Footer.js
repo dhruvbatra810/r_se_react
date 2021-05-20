@@ -16,11 +16,7 @@ export default function Footer() {
         </button>
       </section>
 
-      <footer
-        id="footer"
-        className="bg-dark text-white"
-        style={{ opacity: "0.8" }}
-      >
+      <footer id="footer">
         <p id="copy-getmeds">© Copyright 2021 GetMeds</p>
       </footer>
     </div>

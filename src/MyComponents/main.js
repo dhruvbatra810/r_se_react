@@ -52,7 +52,9 @@ export default function Main() {
             <p className="color-tag">Get your Vaccines booked</p>
           </div>
           <div className="col-lg-4">
-            <i className="fas fa-stethoscope fa-4x ixa"></i>
+            <Link to="/order">
+              <i className="fas fa-stethoscope fa-4x ixa"> </i>
+            </Link>
             <h3>Medicines</h3>
             <p className="color-tag">
               All the medicines you need at discounted price.
@@ -79,14 +81,14 @@ export default function Main() {
           <div className="carousel-inner">
             <div className="carousel-item active">
               <h2 className="testimonials-in">
-                Dr. Smith is a renowned doctor of New york and recommends
+                Dr. Smaran is a renowned doctor of New york and recommends
                 GetMeds.
               </h2>
               <img className="img-2" src={docm} alt="doc-profile"></img>
               <div>
                 <em>
-                  <strong>Dr. Smith</strong>
-                  <br /> New York
+                  <strong>Dr. Smaran</strong>
+                  <br /> New Delhi
                 </em>
               </div>
             </div>
@@ -97,8 +99,8 @@ export default function Main() {
               <img className="img-2" src={docf} alt="doc-profile"></img>
               <div>
                 <em>
-                  <strong>Dr. Nina</strong>
-                  <br /> Los Angeles
+                  <strong>Dr. Nina ghosla</strong>
+                  <br /> Banglore
                 </em>
               </div>
             </div>
@@ -147,9 +149,10 @@ export default function Main() {
               <p>Cash Back Offers</p>
               <p>10 Messages Per Day</p>
               <p>Unlimited App Usage</p>
-              <button className="btn btn-primary" type="button">
-                Sign Up
-              </button>
+              <Link className="btn btn-primary" type="button" to="/aboutus">
+                {" "}
+                Sign up
+              </Link>
             </div>
           </div>
 
@@ -162,9 +165,10 @@ export default function Main() {
               <p>Doctor Consulation</p>
               <p>Unlimited Messages</p>
               <p>Unlimited App Usage</p>
-              <button className="btn btn-primary" type="button">
-                Sign Up
-              </button>
+              <Link className="btn btn-primary" type="button" to="/aboutus">
+                {" "}
+                Sign up
+              </Link>
             </div>
           </div>
 
@@ -177,9 +181,10 @@ export default function Main() {
               <p>Pirority Listing</p>
               <p>Unlimited Messages</p>
               <p>Unlimited App Usage</p>
-              <button className="btn btn-primary" type="button">
-                Sign Up
-              </button>
+              <Link className="btn btn-primary" type="button" to="/aboutus">
+                {" "}
+                Sign up
+              </Link>
             </div>
           </div>
         </div>

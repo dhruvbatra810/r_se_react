@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./header.css";
 import { Link } from "react-router-dom";
 const Header = ({ v }) => {
-  // console.log("wow");
+  console.log("qqq");
   return (
     <>
       <section id="title">
@@ -43,7 +43,10 @@ const Header = ({ v }) => {
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link listnav fs-5" to="/cart">
-                    Cart
+                    Cart{" "}
+                    <span style={{ color: "red", fontSize: "1rem" }}>
+                      <sup>{v === 0 ? undefined : v}</sup>
+                    </span>
                   </Link>
                 </li>
               </ul>

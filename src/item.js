@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Path } from "./index";
 const Item = ({ name, url, price, val, para }) => {
-  const { remove } = useContext(Path);
+  const { remove, vall, cval } = useContext(Path);
   return (
     <div className="container my-4">
       <div className="row">
@@ -26,6 +26,8 @@ const Item = ({ name, url, price, val, para }) => {
                     className="btn btn-primary"
                     onClick={() => {
                       remove(val);
+                      cval(vall - 1);
+                      // console.log(vall);
                     }}
                   >
                     remove

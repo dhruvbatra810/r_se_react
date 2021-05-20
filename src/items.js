@@ -2,9 +2,10 @@ import React, { useContext, useState, useEffect } from "react";
 // import { Cart } from "./cart";
 import Item from "./item";
 import { Path } from "./index";
+import Modal from "./modal";
 const Items = ({ wow }) => {
-  const { arr, remove } = useContext(Path);
-  // console.log(arr);
+  const { arr } = useContext(Path);
+  console.log("wowow");
   const [pr, cpr] = useState(0);
   useEffect(() => {
     let varr = 0;
@@ -26,7 +27,7 @@ const Items = ({ wow }) => {
             );
           })}
           <h1>Total Price:{pr}</h1>
-          <button className="btn btn-primary">Place order</button>
+          <Modal></Modal>
         </div>
       </>
     );

@@ -6,6 +6,12 @@ import Items from "./items";
 import "./index.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Cart } from "./cart";
+
+import Header2 from "./MyComponents/Header";
+import Footer from "./MyComponents/Footer";
+import Main from "./MyComponents/main";
+import About from "./MyComponents/about";
+
 export const Path = React.createContext();
 export const Pathh = React.createContext();
 function BookList() {
@@ -23,6 +29,12 @@ function BookList() {
     <>
       <Router>
         <Header v={vall}></Header>
+        <Route exact path="/">
+          <Main></Main>
+        </Route>
+        <Route exact path="/aboutus">
+          <About></About>
+        </Route>
         <Route exact path="/order">
           <Pathh.Provider value={{ vall, cval }}>
             <App wow={{ arr, changearr }}></App>
@@ -33,6 +45,7 @@ function BookList() {
             <Items></Items>
           </Path.Provider>
         </Route>
+        <Footer></Footer>
       </Router>
     </>
   );

@@ -11,7 +11,7 @@ export const Medicines = [
     url: "https://media-services.digital-rb.com/s3/live-productcatalogue/sys-master/images/hd9/h6f/8848606035998/latest%20ad.jpg?width=320&height=320",
     id: 2,
     price: 40,
-    para: "(500ml) Kills 99.999999% of germs without water",
+    para: "(500ml) Kills 99.9999999999999999999999% of germs without water",
   },
   {
     name: "Pulse Oximeter",

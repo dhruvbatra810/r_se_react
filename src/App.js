@@ -21,7 +21,6 @@ const App = ({ wow }) => {
 };
 const Card = ({ url, name, price, id, arr, changearr, d, para }) => {
   const { vall, cval } = useContext(Pathh);
-  // console.log(changeval);
   const addit = (name, id, url, price) => {
     changearr(() => {
       const val = parseInt(new Date().getTime(), 10);

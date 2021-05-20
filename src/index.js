@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ReactDom from "react-dom";
 import App from "./App";
+import UniqueItem from "./uniqueitem";
 import Header from "./header";
 import Items from "./items";
 import "./index.css";
@@ -45,6 +46,11 @@ function BookList() {
             <Items></Items>
           </Path.Provider>
         </Route>
+        <Route
+          exact
+          path="/item/:id"
+          children={<UniqueItem val={arr}></UniqueItem>}
+        ></Route>
         <Footer></Footer>
       </Router>
     </>

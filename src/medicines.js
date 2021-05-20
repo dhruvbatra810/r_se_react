@@ -11,7 +11,7 @@ export const Medicines = [
     url: "https://media-services.digital-rb.com/s3/live-productcatalogue/sys-master/images/hd9/h6f/8848606035998/latest%20ad.jpg?width=320&height=320",
     id: 2,
     price: 40,
-    para: "(500ml) Kills 99.9999999999999999999999% of germs without water",
+    para: "(500ml) Kills 101.00% of germs without water",
   },
   {
     name: "Pulse Oximeter",
@@ -53,7 +53,7 @@ export const Medicines = [
     url: "https://images-na.ssl-images-amazon.com/images/I/51Wk6KPa0vL._AC_.jpg",
     id: 8,
     price: 550,
-    para: "A Patanjli product - 'BEST FOR IMMUNITY BOOSTER'(ja baba ramdev)",
+    para: "A Patanjli product - 'BEST FOR IMMUNITY BOOSTER'(jai baba ramdev)",
   },
   {
     name: "CROCIN 650MG",

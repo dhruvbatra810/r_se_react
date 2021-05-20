@@ -44,7 +44,9 @@ const Header = ({ v }) => {
                   <Link className="nav-link listnav fs-5" to="/cart">
                     Cart{" "}
                     <span style={{ color: "red", fontSize: "1rem" }}>
-                      <sup>{v === 0 ? undefined : v}</sup>
+                      <sup className="badge bg-secondary">
+                        {v === 0 ? undefined : v}
+                      </sup>
                     </span>
                   </Link>
                 </li>

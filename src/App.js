@@ -4,6 +4,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { Cart } from "./cart";
 import { Pass } from "./index";
 import { Pathh } from "./index";
+import { Link } from "react-router-dom";
 // import ""
 const App = ({ wow }) => {
   const d = new Date();
@@ -59,6 +60,9 @@ const Card = ({ url, name, price, id, arr, changearr, d, para }) => {
             >
               add to cart
             </button>
+            <Link style={{ marginLeft: "3rem" }} to={`/item/${id}`}>
+              know more
+            </Link>
           </div>
         </div>
       </div>

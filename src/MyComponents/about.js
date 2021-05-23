@@ -1,7 +1,7 @@
 import React from "react";
 
 import imagge from "../slide/images.jpg";
-
+import Modal from "../modal";
 function About() {
   return (
     <div className="container-fluid">
@@ -77,7 +77,10 @@ function About() {
             <div className="flex flex-wrap -m-2">
               <div className="p-2 w-1/2 d-flex align-items-center">
                 <div className="relative">
-                  <label for="name" className="leading-7 text-sm text-gray-600">
+                  <label
+                    htmlFor="name"
+                    className="leading-7 text-sm text-gray-600"
+                  >
                     Name:{" "}
                   </label>
                   <input
@@ -91,7 +94,7 @@ function About() {
                 <div className="p-2 w-1/2">
                   <div className="relative">
                     <label
-                      for="email"
+                      htmlFor="email"
                       className="leading-7 text-sm text-gray-600"
                     >
                       Email:{" "}
@@ -108,7 +111,7 @@ function About() {
               <div className="p-2 w-full">
                 <div className="relative d-flex align-item-center">
                   <label
-                    for="message"
+                    htmlFor="message"
                     className="leading-7 text-sm text-gray-600  d-flex align-items-center me-2"
                   >
                     Message:{" "}
@@ -122,7 +125,10 @@ function About() {
                 </div>
               </div>
               <div className="p-2 w-full d-flex justify-content-center">
-                <button className="btn btn-primary">Button</button>
+                <Modal
+                  btext="submit"
+                  text="your form has been submitted"
+                ></Modal>
               </div>
             </div>
           </div>

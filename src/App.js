@@ -1,13 +1,11 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import { Medicines } from "./medicines";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import { Cart } from "./cart";
-import { Pass } from "./index";
+
 import { Pathh } from "./index";
 import { Link } from "react-router-dom";
 // import ""
 const App = ({ wow }) => {
-  const d = new Date();
   return (
     <div className="container">
       <div className="row">
@@ -20,7 +18,7 @@ const App = ({ wow }) => {
     </div>
   );
 };
-const Card = ({ url, name, price, id, arr, changearr, d, para }) => {
+const Card = ({ url, name, price, id, arr, changearr, para }) => {
   const { vall, cval } = useContext(Pathh);
   const addit = (name, id, url, price) => {
     changearr(() => {

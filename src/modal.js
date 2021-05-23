@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function TransitionsModal() {
+export default function TransitionsModal({ text, btext }) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 
@@ -33,7 +33,7 @@ export default function TransitionsModal() {
   return (
     <div>
       <button type="submit" className="btn btn-primary" onClick={handleOpen}>
-        Place your order
+        {btext}
       </button>
       <Modal
         aria-labelledby="transition-modal-title"
@@ -49,7 +49,7 @@ export default function TransitionsModal() {
       >
         <Fade in={open}>
           <div className={classes.paper}>
-            <h2 id="transition-modal-title"> Your order has been placed</h2>
+            <h2 id="transition-modal-title"> {text}</h2>
           </div>
         </Fade>
       </Modal>

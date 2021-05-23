@@ -26,7 +26,10 @@ const Items = ({ wow }) => {
             );
           })}
           <h1>Total Price:{pr}</h1>
-          <Modal></Modal>
+          <Modal
+            btext="place your order"
+            text="your order has been placed"
+          ></Modal>
         </div>
       </>
     );

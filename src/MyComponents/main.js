@@ -81,7 +81,7 @@ export default function Main() {
           <div className="carousel-inner">
             <div className="carousel-item active">
               <h2 className="testimonials-in">
-                Dr. Smaran is a renowned doctor of New york and recommends
+                Dr. Smaran is a renowned doctor of New Delhi and recommends
                 GetMeds.
               </h2>
               <img className="img-2" src={docm} alt="doc-profile"></img>
@@ -99,7 +99,7 @@ export default function Main() {
               <img className="img-2" src={docf} alt="doc-profile"></img>
               <div>
                 <em>
-                  <strong>Dr. Nina ghosla</strong>
+                  <strong>Dr. Nina</strong>
                   <br /> Banglore
                 </em>
               </div>
@@ -125,10 +125,10 @@ export default function Main() {
       </section>
 
       <section id="press">
-        <img className="img-3" src={cipla} alt="tc-logo"></img>
-        <img className="img-3" src={biocon} alt="tnw-logo"></img>
-        <img className="img-3" src={biogen} alt="biz-insider-logo"></img>
-        <img className="img-3" src={teva} alt="mashable-logo"></img>
+        <img className="img-3" src={cipla} alt="cipla-logo"></img>
+        <img className="img-3" src={biocon} alt="biocon-logo"></img>
+        <img className="img-3" src={biogen} alt="biogen-logo"></img>
+        <img className="img-3" src={teva} alt="teva-logo"></img>
       </section>
 
       <section id="pricing">
@@ -147,8 +147,8 @@ export default function Main() {
             <div className="card-body">
               <h2 className="pricing-in">Free</h2>
               <p>Cash Back Offers</p>
-              <p>10 Messages Per Day</p>
-              <p>Unlimited App Usage</p>
+              <p>Free Delivery</p>
+
               <Link className="btn btn-primary" type="button" to="/aboutus">
                 {" "}
                 Sign up
@@ -163,8 +163,8 @@ export default function Main() {
             <div className="card-body">
               <h2 className="pricing-in">Rs 499/ mo</h2>
               <p>Doctor Consulation</p>
-              <p>Unlimited Messages</p>
-              <p>Unlimited App Usage</p>
+              <p>Weekly Newsletter</p>
+
               <Link className="btn btn-primary" type="button" to="/aboutus">
                 {" "}
                 Sign up
@@ -179,8 +179,8 @@ export default function Main() {
             <div className="card-body">
               <h2 className="pricing-in">Rs 999/ mo</h2>
               <p>Pirority Listing</p>
-              <p>Unlimited Messages</p>
-              <p>Unlimited App Usage</p>
+              <p>Yearly health checkups</p>
+
               <Link className="btn btn-primary" type="button" to="/aboutus">
                 {" "}
                 Sign up

@@ -1,4 +1,9 @@
-https://getmeds.netlify.app/
+# app-info
+Group Project
+
+My role : React\
+stack used : React bootstrap\
+[app](https://getmeds.netlify.app/).
 
 # Getting Started with Create React App
 
